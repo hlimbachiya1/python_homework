@@ -1,0 +1,17 @@
+I created a python file for diary entry.
+I also learnt pyhton lesson 2.
+nope.
+nah.
+done for now
+entry1
+entry2
+done for now
+new test entry1
+ new test entry 2
+ done for now
+
+ done for now
+ done for now
+test entry 1
+test entry 2
+done for now
