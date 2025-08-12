@@ -124,13 +124,14 @@ clean_data['Salary'] = clean_data['Salary'].fillna(salary_median)
 print("After filling missing values:")
 print(clean_data)
 
-# 4.7  [ASK MENTOR FOR HELP WITH THIS STEP]
+# 4.7  [Received help from mentor. Note: use regex only when the input string is really messy and need customized operation]
 print("\n7. converting the hire-date to datetime:")
-clean_data['Hire Date'] = clean_data['Hire Date'].astype(str).str.strip()
-clean_data['Hire Date'] = clean_data['Hire Date'].str.replace(r'\s+', '', regex=True)
-clean_data['Hire Date'] = clean_data['Hire Date'].str.replace(r'[^0-9/\-]', '', regex=True)
-clean_data['Hire Date'] = clean_data['Hire Date'].str.replace('/', '-')
-clean_data['Hire Date'] = pd.to_datetime(clean_data['Hire Date'], errors='coerce', dayfirst=False)
+# clean_data['Hire Date'] = clean_data['Hire Date'].astype(str).str.strip() # todatetime = true ?
+# clean_data['Hire Date'] = clean_data['Hire Date'].str.replace(r'\s+', '', regex=True)
+# clean_data['Hire Date'] = clean_data['Hire Date'].str.replace(r'[^0-9/\-]', '', regex=True)
+# clean_data['Hire Date'] = clean_data['Hire Date'].str.replace('/', '-')
+# clean_data['Hire Date'] = pd.to_datetime(clean_data['Hire Date'], errors='coerce', infer_datetime_format=True)
+clean_data['Hire Date'] = pd.to_datetime(clean_data['Hire Date'], format='mixed')
 print("After converting Hire Date:")
 print(clean_data)
 
